@@ -64,6 +64,10 @@ class Hand:
                 
         if has_ace and self.value > 21:
             self.value -= 10
+            
+    def get_value(self):
+        self.calculate_value()
+        return self.value
         
 
 deck = Deck()
