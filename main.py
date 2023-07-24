@@ -71,6 +71,15 @@ class Hand:
     
     def is_blackjack(self):
         return self.get_value() == 21
+    
+    def display(self):
+        print(f'''{"Dealer's" if self.dealer else "Your"} hand:''')
+        for card in self.cards:
+            print(card)
+            
+        if not self.dealer:
+            print("Value:", self.get_value())
+        print() # Add line
         
 
 deck = Deck()
@@ -78,5 +87,5 @@ deck.shuffle()
 
 hand = Hand()
 hand.add_card(deck.deal(2))
-print(hand.cards[0], hand.cards[1])
+hand.display()
     
