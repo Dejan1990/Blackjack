@@ -68,6 +68,9 @@ class Hand:
     def get_value(self):
         self.calculate_value()
         return self.value
+    
+    def is_blackjack(self):
+        return self.get_value() == 21
         
 
 deck = Deck()
