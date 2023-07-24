@@ -1,5 +1,12 @@
 import random
 
+class Card:
+    def __init__(self, suit, rank):
+        self.suit = suit
+        self.rank = rank
+    def __str__(self):
+        return f"{self.rank['rank']} of {self.suit}"
+
 class Deck:
     def __init__(self): # self represent instance of the class
         self.cards = []
@@ -35,10 +42,7 @@ class Deck:
                 cards_dealt.append(card) 
         return cards_dealt 
     
-deck1 = Deck()
-deck2 = Deck()
-deck2.shuffle()
-print(deck1.cards)
-print(deck2.cards)
+card1 = Card("hearts", {"rank": "Q", "value": 10})
+print(card1)
 
     
